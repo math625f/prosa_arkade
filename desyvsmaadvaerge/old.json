@@ -1,0 +1,182 @@
+{
+    "Brille": {
+        "add": "<$A$> er ved at forklare <$B$> om hvordan de optimerer deres prinsesse-rednings-selvskab.\n<$C$> overhører snakken, og går hen for at høre med.",
+        "remove": "<$B$> spørger <$A$> om noget han ikke kender svaret på.\n<$A$> skynder sig ind og læse i den store bog for at finde et svar.",
+        "last": "<$A$> undrer sig over hvor alle de andre er blevet af, og går ud for at lede efter dem.",
+        "emoji": "face_with_monocle"
+    },
+    "Gnavpot": {
+        "interactions": {
+            "Brille": {
+                "message": "",
+                "action": ""
+            },
+            "Lystig": {
+                "message": "",
+                "action": ""
+            },
+            "Prosit": {
+                "message": "",
+                "action": ""
+            },
+            "Flovmand": {
+                "message": "",
+                "action": ""
+            },
+            "Søvnig": {
+                "message": "",
+                "action": ""
+            },
+            "Dumpe": {
+                "message": "",
+                "action": ""
+            }
+        },
+        "emoji": "angry_face"
+    },
+    "Lystig": {
+        "interactions": {
+            "Brille": {
+                "message": "",
+                "action": ""
+            },
+            "Gnavpot": {
+                "message": "",
+                "action": ""
+            },
+            "Prosit": {
+                "message": "",
+                "action": ""
+            },
+            "Flovmand": {
+                "message": "",
+                "action": ""
+            },
+            "Søvnig": {
+                "message": "",
+                "action": ""
+            },
+            "Dumpe": {
+                "message": "",
+                "action": ""
+            }
+        },
+        "emoji": "beaming_face_with_smiling_eyes"
+    },
+    "Prosit": {
+        "interactions": {
+            "Brille": {
+                "message": "",
+                "action": ""
+            },
+            "Gnavpot": {
+                "message": "",
+                "action": ""
+            },
+            "Lystig": {
+                "message": "",
+                "action": ""
+            },
+            "Flovmand": {
+                "message": "",
+                "action": ""
+            },
+            "Søvnig": {
+                "message": "",
+                "action": ""
+            },
+            "Dumpe": {
+                "message": "",
+                "action": ""
+            }
+        },
+        "emoji": "sneezing_face"
+    },
+    "Flovmand": {
+        "interactions": {
+            "Brille": {
+                "message": "",
+                "action": ""
+            },
+            "Gnavpot": {
+                "message": "",
+                "action": ""
+            },
+            "Lystig": {
+                "message": "",
+                "action": ""
+            },
+            "Prosit": {
+                "message": "",
+                "action": ""
+            },
+            "Søvnig": {
+                "message": "",
+                "action": ""
+            },
+            "Dumpe": {
+                "message": "",
+                "action": ""
+            }
+        },
+        "emoji": "flushed_face"
+    },
+    "Søvnig": {
+        "interactions": {
+            "Brille": {
+                "message": "",
+                "action": ""
+            },
+            "Gnavpot": {
+                "message": "",
+                "action": ""
+            },
+            "Lystig": {
+                "message": "",
+                "action": ""
+            },
+            "Prosit": {
+                "message": "",
+                "action": ""
+            },
+            "Flovmand": {
+                "message": "",
+                "action": ""
+            },
+            "Dumpe": {
+                "message": "",
+                "action": ""
+            }
+        },
+        "emoji": "sleeping"
+    },
+    "Dumpe": {
+        "interactions": {
+            "Brille": {
+                "message": "",
+                "action": ""
+            },
+            "Gnavpot": {
+                "message": "",
+                "action": ""
+            },
+            "Lystig": {
+                "message": "",
+                "action": ""
+            },
+            "Prosit": {
+                "message": "",
+                "action": ""
+            },
+            "Flovmand": {
+                "message": "",
+                "action": ""
+            },
+            "Søvnig": {
+                "message": "",
+                "action": ""
+            }
+        },
+        "emoji": "zany_face"
+    }
+}

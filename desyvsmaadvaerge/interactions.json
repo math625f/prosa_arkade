@@ -1,0 +1,44 @@
+{
+    "Brille": {
+        "add": "<$A$> er ved at forklare <$B$> om hvordan de optimerer deres prinsesse-rednings-selvskab.\n<$C$> overhører snakken, og går hen for at høre med.",
+        "remove": "<$B$> spørger <$A$> om noget han ikke kender svaret på.\n<$A$> skynder sig ind og læse i den store bog for at finde et svar.",
+        "last": "<$A$> undrer sig over hvor alle de andre er blevet af, og går ud for at lede efter dem.",
+        "emoji": "face_with_monocle"
+    },
+    "Gnavpot": {
+        "add": "<$A$> bliver pludseligt helt rød i hovedet, og kaster sin sutsko efter <$B$>.\n<$B$> undviger, og sutskoen rammer uheldigvis <$C$> i stedet, som kommer hen for at se hvad der forgår.",
+        "remove": "<$A$> bliver så sur på <$B$> at han går sin vej.",
+        "last": "<$A$> nyder stilheden efter at alle de andre er gået, og sætter sig ned i sin lænestol.",
+        "emoji": "angry_face"
+    },
+    "Lystig": {
+        "add": "<$A$> og <$B$> kan ikke blive enige om at æbler eller pærer smager bedst.\nDe går sammen hen og spørger <$C$> for at se om de kan nå til enighed.",
+        "remove": "<$B$> spørger <$A$> hvad de skal have til aftensmad.\n<$A$> kommer i tanke om han helt har glemt at samle frugt, og skynder sig ud i skoven.",
+        "last": "<$A$> skynder sig at løbe efter de andre.",
+        "emoji": "beaming_face_with_smiling_eyes"
+    },
+    "Prosit": {
+        "add": "<$B$> får <$A$> til at lave et highfive med ham. Hvad <$A$> ikke ved, er at <$B$> har  mel på fingrene for at drille <$A$>, hvilket får <$A$> til at nyse.\n<$C$> hørte det kraftige nys, og kommer hen med noget papir til <$A$>.",
+        "remove": "<$B$> har set <$A$> nyse så mange gange før, at han kan forudse at <$A$> kommer til at nyse.\n<$B$> beder <$A$> om at gå udenfor, så det ikke larmer så meget.",
+        "last": "<$A$> nyser pludseligt så kraftigt, at han flyver helt til landet langt langt borte.",
+        "emoji": "sneezing_face"
+    },
+    "Flovmand": {
+        "add": "<$A$> bliver så pinligt berørt på <$B$>'s vegne, at han bliver svimmel og vælter ind i bordet.\n<$C$> hører tommulten, og skynder sig ind for at se hvad der er sket",
+        "remove": "<$A$> ",
+        "last": "<$A$> bliver så flov over at han slet ikke har lagt mærke til at alle de andre gik, at han gemmer sig under tæppet.",
+        "emoji": "flushed_face"
+    },
+    "Søvnig": {
+        "add": "",
+        "remove": "",
+        "last": "",
+        "emoji": "sleeping"
+    },
+    "Dumpe": {
+        "add": "",
+        "remove": "",
+        "last": "",
+        "emoji": "zany_face"
+    }
+}
