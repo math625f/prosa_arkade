@@ -25,20 +25,20 @@
     },
     "Flovmand": {
         "add": "<$A$> bliver så pinligt berørt på <$B$>'s vegne, at han bliver svimmel og vælter ind i bordet.\n<$C$> hører tommulten, og skynder sig ind for at se hvad der er sket",
-        "remove": "<$A$> ",
+        "remove": "<$A$> kommer pludselig i tanke om dengang i sidste uge hvor han blev meget pinligt berørt, og skynder sig ud for at gemme sig på toilettet.",
         "last": "<$A$> bliver så flov over at han slet ikke har lagt mærke til at alle de andre gik, at han gemmer sig under tæppet.",
         "emoji": "flushed_face"
     },
     "Søvnig": {
-        "add": "",
-        "remove": "",
-        "last": "",
+        "add": "<$B$> opdager at <$A$> er ved at falde i søvn mens de står og snakker, og klapper højt med hænderne for at holde ham vågen.\n<$C$> står i rummet ved siden af og får et kæmpe chok, og han går ind for at bede om ro.",
+        "remove": "<$A$> bliver overvældet af træthed, og går ind for at lægge sig.",
+        "last": "<$A$> synker langsomt sammen til gulvet, hvor han tager en lur.",
         "emoji": "sleeping"
     },
     "Dumpe": {
-        "add": "",
-        "remove": "",
-        "last": "",
+        "add": "<$A$> opdager at <$B$> er ved at stable nogle kasser, og går hen for at hjælpe til.\n<$A$> kommer (overraskende nok) til at vælte kasserne, og <$B$> kalder fortvivlet efter <$C$> for at få hjælp.",
+        "remove": "<$B$> har mistet tålmodigheden med <$A$> og beder ham om at gå sin vej.",
+        "last": "<$A$> sætter sig opgivende ned i spisestuen, og venter dydigt på at de andre kommer tilbage.",
         "emoji": "zany_face"
     }
 }
