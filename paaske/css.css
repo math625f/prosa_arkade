@@ -1,0 +1,96 @@
+#gameContainer{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: #6ab04c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu > ul > li{
+    background-color: rgba(68, 189, 50, .5);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 20px 60px;
+    font-size: 2em;
+    border: 1px solid rgba(0,0,0,.5);
+    border-radius: .25rem;
+    margin: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color .2s, box-shadow .2s;
+    transform: translateX(0);
+    letter-spacing: 0.05em;
+    font-weight: bold;
+    user-select: none;
+}
+
+#menu > ul > li:hover{
+    background-color: rgba(68, 189, 50, .7);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 13px;
+}
+
+#menu > h1{
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    letter-spacing: 0.05em;
+    font-weight: bold;
+    user-select: none;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.pushLeft{
+    animation: anim-left .7s;
+    animation-fill-mode: forwards;
+}
+
+.pushRight{
+    transform: translateX(100vw);
+}
+
+#menu.displayed{
+    animation: anim-left-to-center .7s;
+    animation-fill-mode: forwards;
+}
+
+#help.displayed, #highscores.displayed{
+    animation: anim-right-to-center .7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes anim-left{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100vw);
+    }
+}
+
+@keyframes anim-right{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(100vw);
+    }
+}
+
+@keyframes anim-left-to-center{
+    0%{
+        transform: translateX(-100vw);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes anim-right-to-center{
+    0%{
+        transform: translateX(-100vw);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
