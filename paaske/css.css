@@ -1,11 +1,17 @@
-#gameContainer{
+body{
+    overflow: hidden;
+    position: relative;
+    background: #6ab04c;
+}
+
+#menuContainer{
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background: #6ab04c;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: abslute;
 }
 
 #menu > ul > li{
@@ -23,9 +29,10 @@
     letter-spacing: 0.05em;
     font-weight: bold;
     user-select: none;
+    font-family: 'Open Sans', sans-serif;
 }
 
-#menu > ul > li:hover{
+#menu > ul > li:hover, .backButton:hover{
     background-color: rgba(68, 189, 50, .7);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 13px;
 }
@@ -38,6 +45,7 @@
     font-weight: bold;
     user-select: none;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .pushLeft{
@@ -54,9 +62,66 @@
     animation-fill-mode: forwards;
 }
 
-#help.displayed, #highscores.displayed{
+#menu.hidden{
+    animation: anim-left .7s;
+    animation-fill-mode: forwards;
+}
+
+#help.displayed, #highscores.displayed, #game.displayed{
     animation: anim-right-to-center .7s;
     animation-fill-mode: forwards;
+}
+
+#help.hidden, #highscores.hidden, #game.hidden{
+    animation: anim-right .7s;
+    animation-fill-mode: forwards;
+}
+
+#help, #highscores{
+    transform: translateX(100vw);
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+#game{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    transform: translateX(100vw);
+}
+
+#countdown{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2em;
+}
+
+.backButton{
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background-color: rgba(68, 189, 50, .5);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 20px 50px;
+    font-size: 1.2em;
+    border: 1px solid rgba(0,0,0,.5);
+    border-radius: .25rem;
+    cursor: pointer;
+}
+
+.dnone{
+    display: none;
 }
 
 @keyframes anim-left{
@@ -88,9 +153,87 @@
 
 @keyframes anim-right-to-center{
     0%{
-        transform: translateX(-100vw);
+        transform: translateX(100vw);
     }
     100%{
         transform: translateX(0);
     }
+}
+
+#spots > div{
+    position: relative;
+    flex-basis: 25%;
+    cursor: pointer;
+}
+
+#spots > div > img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-32px, -32px);
+    user-select: none;
+}
+
+#spots > div > img:last-child{
+    transform: translate(-32px, -64px);
+}
+
+#spots{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#spots > div.displayed > img:first-child{
+    animation: pop-up .2s;
+    animation-fill-mode: forwards;
+}
+
+#spots > div.hidden > img:first-child{
+    animation: pop-down .2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes pop-up {
+    0%{
+        transform: translate(-32px, -5px);
+    }
+
+    100%{
+        transform: translate(-32px, -60px);
+    }
+}
+
+@keyframes pop-down {
+    0%{
+        transform: translate(-32px, -60px);
+    }
+
+    100%{
+        transform: translate(-32px, -5px);
+    }
+}
+
+#gameDetails{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+}
+
+#help > p{
+    font-size: 1.2em;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#help{
+    padding: 15px;
+}
+
+#highscores > ul{
+    font-size: 1.2em;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#highscores > ul > li{
+    margin-top: 4px;
 }
