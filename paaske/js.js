@@ -1,8 +1,8 @@
 let gameRunning = false;
 let score = 0;
-let maxTime = 5_000; // in milliseconds, = 30s
+let maxTime = 30_000; // in milliseconds, = 30s
 let timeRemaining = 0;
-let spawnDelay = 400; // milliseconds, has to be divisible by tick speed
+let spawnDelay = 600; // milliseconds, has to be divisible by tick speed
 let tickspeed = 10; // how many milliseconds between each tick
 let spots = [];
 let menuAnimateDuration = 700;
@@ -91,10 +91,15 @@ $(document).ready(() => {
     highscores = JSON.parse(window.localStorage.getItem('highscores'));
     if(highscores == null) highscores = [0,0,0,0,0,0,0,0,0];
 
+    updateHighscores();
+});
+
+const updateHighscores = () => {
+    $("#highscores > ul").html("");
     highscores.forEach((score, i) => {
         $("#highscores > ul").append($("<li>" + (i + 1) + ".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + score + "</li>"))
     })
-});
+}
 
 const startClicked = (content) => {
     $("#" + content).removeClass('displayed').addClass('hidden');
@@ -154,7 +159,7 @@ const stopGame = () => {
         highscores = highscores.slice(0, i).concat(score,highscores.slice(i, highscores.length - 1));
         window.localStorage.setItem('highscores', JSON.stringify(highscores));
     }
-    console.log(highscores);
+    updateHighscores();
     score = 0;
     $("#score > span").text(0);
 }
