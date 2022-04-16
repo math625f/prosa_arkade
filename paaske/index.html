@@ -30,7 +30,7 @@
                 <span style="color:#3949ab">T</span>
             </h1>
             <ul>
-                <li onclick="startClicked();">
+                <li onclick="startClicked('menu');">
                     START
                 </li>
                 <li onclick="helpClicked();">
@@ -116,9 +116,20 @@
                 <img src="img/dirt.png" width="64" height="128"> 
             </div>
         </div>
+        <div id="gamemenu" class="hidden">
+            <p>Du fik samlet <span id="scoreResult">0</span> påskeæg!</p>
+            <ul>
+                <li onclick="startClicked('gamemenu');">
+                    PRØV IGEN
+                </li>
+                <li onclick="backClicked('game');">
+                    TILBAGE TIL MENU
+                </li>
+            </ul>
+        </div>
     </div>
     <div id="help">
-        <button type="button" class="backButton" onclick="backClicked('help');">Gå tilbage</button>
+        <button tabindex="-1" type="button" class="backButton" onclick="backClicked('help');">Gå tilbage</button>
         <p>
             Hjælp påskeharen med at samle sine påskeæg! <br />
             Påskeharen har brug for <b>din</b> hjælp med at samle sine påskeæg.<br />
@@ -131,7 +142,7 @@
         </p>
     </div>
     <div id="highscores">
-        <button type="button" class="backButton" onclick="backClicked('highscores');">Gå tilbage</button>
+        <button tabindex="-1" type="button" class="backButton" onclick="backClicked('highscores');">Gå tilbage</button>
         <ul>
             
         </ul>

@@ -14,7 +14,7 @@ body{
     position: abslute;
 }
 
-#menu > ul > li{
+#menu > ul > li, #gamemenu > ul > li{
     background-color: rgba(68, 189, 50, .5);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 20px 60px;
@@ -32,7 +32,7 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 
-#menu > ul > li:hover, .backButton:hover{
+#menu > ul > li:hover, .backButton:hover, #gamemenu > ul > li:hover{
     background-color: rgba(68, 189, 50, .7);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 13px;
 }
@@ -67,17 +67,17 @@ body{
     animation-fill-mode: forwards;
 }
 
-#help.displayed, #highscores.displayed, #game.displayed{
+#help.displayed, #highscores.displayed, #game.displayed, #gamemenu.displayed{
     animation: anim-right-to-center .7s;
     animation-fill-mode: forwards;
 }
 
-#help.hidden, #highscores.hidden, #game.hidden{
+#help.hidden, #highscores.hidden, #game.hidden, #gamemenu.hidden{
     animation: anim-right .7s;
     animation-fill-mode: forwards;
 }
 
-#help, #highscores{
+#help, #highscores, #gamemenu{
     transform: translateX(100vw);
     display: flex;
     width: 100vw;
@@ -236,4 +236,15 @@ body{
 
 #highscores > ul > li{
     margin-top: 4px;
+}
+
+#gamemenu{
+    background: #6ab04c;
+    display: flex;
+    flex-direction: column;
+}
+
+#gamemenu > p{
+    font-size: 1.2em;
+    font-family: 'Open Sans', sans-serif;
 }

@@ -1,6 +1,6 @@
 let gameRunning = false;
 let score = 0;
-let maxTime = 30_000; // in milliseconds, = 30s
+let maxTime = 5_000; // in milliseconds, = 30s
 let timeRemaining = 0;
 let spawnDelay = 400; // milliseconds, has to be divisible by tick speed
 let tickspeed = 10; // how many milliseconds between each tick
@@ -10,6 +10,7 @@ let hareAnimateDuration = 200;
 let uptime = 4000; // Actually value has hareAnimatDuration added due to animation
 let totalUp = 0;
 let gameInterval = null;
+let highscores = null;
 
 class Hare{
     constructor(el){
@@ -69,6 +70,17 @@ class Hare{
             totalUp--;
         }, hareAnimateDuration);
     }
+
+    reset(){
+        clearTimeout(this.resetTimeout);
+        clearTimeout(this.downTimeout);
+        this.el.addClass('displayed').removeClass('hidden');
+
+        this.isUp = false;
+        totalUp--;
+        this.stamp = null;
+        this.buffer = false;
+    }
 }
 
 $(document).ready(() => {
@@ -76,16 +88,18 @@ $(document).ready(() => {
         return new Hare(hare);
     }).get();
 
-    let highscores = [0,0,0,0,0,0,0,0,0];
+    highscores = JSON.parse(window.localStorage.getItem('highscores'));
+    if(highscores == null) highscores = [0,0,0,0,0,0,0,0,0];
+
     highscores.forEach((score, i) => {
         $("#highscores > ul").append($("<li>" + (i + 1) + ".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + score + "</li>"))
     })
 });
 
-const startClicked = () => {
-    $("#menu").addClass('hidden');
+const startClicked = (content) => {
+    $("#" + content).removeClass('displayed').addClass('hidden');
     $("#game").addClass('displayed').removeClass('hidden');
-    $("#spots > div").removeClass('hidden').addClass('displayed');
+    spots.forEach(hare => hare.reset());
     setTimeout(() => {
         $("#countdown").removeClass('dnone');
         $("#countdown > span").text('3');
@@ -117,7 +131,6 @@ const startGame = () => {
             while(spots[random].isUp){
                 random = Math.floor(Math.random() * 16);
             }
-            console.log()
             spots[random].up();
         }
         timeRemaining -= tickspeed;
@@ -133,6 +146,17 @@ const startGame = () => {
 const stopGame = () => {
     clearInterval(gameInterval);
     gameRunning = false;
+    $("#gamemenu").addClass('displayed').removeClass('hidden');
+    $("#scoreResult").text(score);
+    let i = 0;
+    while(i < highscores.length && highscores[i] >= score) i++;
+    if(i < highscores.length){ // This new score should go in the highscore list
+        highscores = highscores.slice(0, i).concat(score,highscores.slice(i, highscores.length - 1));
+        window.localStorage.setItem('highscores', JSON.stringify(highscores));
+    }
+    console.log(highscores);
+    score = 0;
+    $("#score > span").text(0);
 }
 
 const helpClicked = () => {
@@ -148,4 +172,7 @@ const highClicked = () => {
 const backClicked = (content) => {
     $("#menu").addClass('displayed').removeClass('hidden');
     $("#" + content).addClass('hidden').removeClass('displayed');
+    if(content = "menu"){
+        $("#gamemenu").addClass('hidden').removeClass('displayed');
+    }
 }
