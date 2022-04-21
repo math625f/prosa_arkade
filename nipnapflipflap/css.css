@@ -7,10 +7,6 @@ div{
     transition: all .5s;
 }
 
-#nw > div, #sw > div, #ne > div, #se > div{
-    background: #fff;
-}
-
 #nw{
     position: absolute;
     left: 0;
@@ -18,7 +14,7 @@ div{
 }
 
 #nw > .top{
-    background: red;
+    background-color: #d63031;
     width: 50vw;
     height: 50vh;
     position: absolute;
@@ -28,8 +24,7 @@ div{
 }
 
 #nw > .east{
-    background-color: #fff;
-    background-image: linear-gradient(90deg, #fff 50%, rgba(0,0,0,.5) 98%);
+    background-color: #ff7675;
     width: 50vw;
     height: 50vh;
     position: absolute;
@@ -40,8 +35,7 @@ div{
 }
 
 #nw > .south{
-    background-color: #fff;
-    background-image: linear-gradient(0deg, #fff 50%, rgba(0,0,0,.5) 98%);
+    background-color: #fab1a0;
     width: 50vw;
     height: 50vh;
     position: absolute;
@@ -56,7 +50,7 @@ div{
 }
 
 #container.vertical > #nw > .top{
-    transform: rotateX(-45deg);
+    transform: rotateX(-60deg);
 }
 
 #container.horizontal > #nw > .east{
@@ -64,8 +58,13 @@ div{
 }
 
 #container.vertical > #nw > .south{
-    trasnform: rotateX(79deg)
+    transform: rotateX(60deg)
 }
+
+
+
+
+
 
 #ne{
     position: absolute;
@@ -74,7 +73,7 @@ div{
 }
 
 #ne > .top{
-    background: red;
+    background: #0984e3;
     width: 50vw;
     height: 50vh;
     position: absolute;
@@ -84,8 +83,7 @@ div{
 }
 
 #ne > .west{
-    background-color: #fff;
-    background-image: linear-gradient(270deg, #fff 50%, rgba(0,0,0,.5) 98%);
+    background-color: #74b9ff;
     width: 50vw;
     height: 50vh;
     position: absolute;
@@ -95,10 +93,138 @@ div{
     transform-origin: left;
 }
 
+#ne > .south{
+    background-color: #81ecec;
+    width: 50vw;
+    height: 50vh;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: rotateX(90deg);
+    transform-origin: bottom;
+}
+
 #container.horizontal > #ne > .top{
     transform: rotateY(45deg);
 }
 
 #container.horizontal > #ne > .west{
     transform: rotateY(-73deg);
+}
+
+#container.vertical > #ne > .south{
+    transform: rotateX(60deg)
+}
+
+
+
+
+
+
+#sw{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+#sw > .top{
+    background-color: #d63031;
+    width: 50vw;
+    height: 50vh;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform-origin: bottom left;
+}
+
+#sw > .east{
+    background-color: #ff7675;
+    width: 50vw;
+    height: 50vh;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: rotateY(90deg);
+    transform-origin: right;
+}
+
+#sw > .north{
+    background-color: #fab1a0;
+    width: 50vw;
+    height: 50vh;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: rotateX(-90deg);
+    transform-origin: top;
+}
+
+#container.horizontal > #sw > .top{
+    transform: rotateY(-45deg);
+}
+
+#container.vertical > #sw > .top{
+    transform: rotateX(60deg);
+}
+
+#container.horizontal > #sw > .east{
+    transform: rotateY(73deg);
+}
+
+#container.vertical > #sw > .north{
+    transform: rotateX(-60deg)
+}
+
+
+
+
+
+#ne{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#ne > .top{
+    background: #0984e3;
+    width: 50vw;
+    height: 50vh;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform-origin: right;
+}
+
+#ne > .west{
+    background-color: #74b9ff;
+    width: 50vw;
+    height: 50vh;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: rotateY(-90deg);
+    transform-origin: left;
+}
+
+#ne > .south{
+    background-color: #81ecec;
+    width: 50vw;
+    height: 50vh;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: rotateX(90deg);
+    transform-origin: bottom;
+}
+
+#container.horizontal > #ne > .top{
+    transform: rotateY(45deg);
+}
+
+#container.horizontal > #ne > .west{
+    transform: rotateY(-73deg);
+}
+
+#container.vertical > #ne > .south{
+    transform: rotateX(60deg)
 }
