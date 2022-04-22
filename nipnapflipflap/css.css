@@ -4,7 +4,47 @@ body{
 }
 
 div{
-    transition: all .5s;
+    transition: all .35s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+}
+
+#container.base .top{
+    cursor: pointer;
+}
+
+#container.base > #nw > .top:hover{
+    background-color: #d63030de;
+}
+
+#container.base > #ne > .top:hover{
+    background-color: #0984e3de;
+}
+
+#container.base > #sw > .top:hover{
+    background-color: #fdcb6ede;
+}
+
+#container.base > #se > .top:hover{
+    background-color: #e84393de;
+}
+
+.top{
+    font-size: 2em;
+}
+
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#container{
+    width: 100vw;
+    height: 100vw;
 }
 
 #nw{
@@ -35,7 +75,7 @@ div{
 }
 
 #nw > .south{
-    background-color: #fab1a0;
+    background-color: #e17055;
     width: 50vw;
     height: 50vh;
     position: absolute;
@@ -58,9 +98,18 @@ div{
 }
 
 #container.vertical > #nw > .south{
-    transform: rotateX(60deg)
+    transform: rotateX(60deg);
 }
 
+#container.horizontal > #nw > .east:hover{
+    background-color: #ff7675de;
+    cursor: pointer;
+}
+
+#container.vertical > #nw > .south:hover{
+    background-color: #e17055de;
+    cursor: pointer;
+}
 
 
 
@@ -79,7 +128,7 @@ div{
     position: absolute;
     right: 0;
     top: 0;
-    transform-origin: right;
+    transform-origin: top right;
 }
 
 #ne > .west{
@@ -104,6 +153,10 @@ div{
     transform-origin: bottom;
 }
 
+#container.vertical > #ne > .top{
+    transform: rotateX(60deg);
+}
+
 #container.horizontal > #ne > .top{
     transform: rotateY(45deg);
 }
@@ -116,6 +169,15 @@ div{
     transform: rotateX(60deg)
 }
 
+#container.vertical > #ne > .south:hover{
+    background-color: #81ececde;
+    cursor: pointer;
+}
+
+#container.horizontal > #ne > .west:hover{
+    background-color: #74b9ffde;
+    cursor: pointer;
+}
 
 
 
@@ -124,26 +186,26 @@ div{
 #sw{
     position: absolute;
     left: 0;
-    bottom: 0;
+    top: 50vh;
 }
 
 #sw > .top{
-    background-color: #d63031;
+    background: #fdcb6e;
     width: 50vw;
     height: 50vh;
     position: absolute;
     left: 0;
-    bottom: 0;
+    top: 0;
     transform-origin: bottom left;
 }
 
 #sw > .east{
-    background-color: #ff7675;
+    background-color: #ffeaa7;
     width: 50vw;
     height: 50vh;
     position: absolute;
     left: 0;
-    bottom: 0;
+    top: 0;
     transform: rotateY(90deg);
     transform-origin: right;
 }
@@ -154,13 +216,13 @@ div{
     height: 50vh;
     position: absolute;
     left: 0;
-    bottom: 0;
+    top: 0;
     transform: rotateX(-90deg);
     transform-origin: top;
 }
 
 #container.horizontal > #sw > .top{
-    transform: rotateY(-45deg);
+    transform: rotateY(45deg);
 }
 
 #container.vertical > #sw > .top{
@@ -175,28 +237,37 @@ div{
     transform: rotateX(-60deg)
 }
 
-
-
-
-
-#ne{
-    position: absolute;
-    right: 0;
-    top: 0;
+#container.vertical > #sw > .north:hover{
+    background-color: #fab1a0de;
+    cursor: pointer;
 }
 
-#ne > .top{
-    background: #0984e3;
+#container.horizontal > #sw > .east:hover{
+    background-color: #ffeaa7de;
+    cursor: pointer;
+}
+
+
+
+
+#se{
+    position: absolute;
+    right: 0;
+    top: 50vh;
+}
+
+#se > .top{
+    background: #e84393;
     width: 50vw;
     height: 50vh;
     position: absolute;
     right: 0;
     top: 0;
-    transform-origin: right;
+    transform-origin: bottom right;
 }
 
-#ne > .west{
-    background-color: #74b9ff;
+#se > .west{
+    background-color: #fd79a8;
     width: 50vw;
     height: 50vh;
     position: absolute;
@@ -206,25 +277,39 @@ div{
     transform-origin: left;
 }
 
-#ne > .south{
-    background-color: #81ecec;
+#se > .north{
+    background-color: #a29bfe;
     width: 50vw;
     height: 50vh;
     position: absolute;
     right: 0;
     top: 0;
-    transform: rotateX(90deg);
-    transform-origin: bottom;
+    transform: rotateX(-90deg);
+    transform-origin: top;
 }
 
-#container.horizontal > #ne > .top{
+#container.horizontal > #se > .top{
     transform: rotateY(45deg);
 }
 
-#container.horizontal > #ne > .west{
+#container.vertical > #se > .top{
+    transform: rotateX(60deg);
+}
+
+#container.horizontal > #se > .west{
     transform: rotateY(-73deg);
 }
 
-#container.vertical > #ne > .south{
-    transform: rotateX(60deg)
+#container.vertical > #se > .north{
+    transform: rotateX(-60deg)
+}
+
+#container.vertical > #se > .north:hover{
+    background-color: #a29bfede;
+    cursor: pointer;
+}
+
+#container.horizontal > #se > .west:hover{
+    background-color: #fd79a8de;
+    cursor: pointer;
 }
